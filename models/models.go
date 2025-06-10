@@ -1,7 +1,5 @@
 package models
 
-import "time"
-
 type Intensity struct {
 	Forecast int    `json:"forecast"`
 	Actual   int    `json:"actual"`
@@ -9,7 +7,16 @@ type Intensity struct {
 }
 
 type CarbonIntensityPeriod struct {
-	From      time.Time `json:"from"`
-	To        time.Time `json:"to"`
+	From      string    `json:"from"`
+	To        string    `json:"to"`
 	Intensity Intensity `json:"intensity"`
+}
+
+type ExternalAPIResponse struct {
+	Data []CarbonIntensityPeriod `json:"data"`
+}
+
+type Response struct {
+	Slots           []CarbonIntensityPeriod `json:"slots"`
+	AverageForecast int                     `json:"average_forecast"`
 }
