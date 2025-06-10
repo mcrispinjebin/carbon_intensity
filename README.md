@@ -47,6 +47,7 @@ Unit Test cases are available in `processor/processor_test` file.
 ### Future Scope ###
 
 1. Partial duration calculation to be improve by checking it on each slot on the window.
+1. Add a linting tool, for static check.
 1. Documentation of APIs in OpenAPI(Swagger)
 1. Improving unit test coverage.
 
